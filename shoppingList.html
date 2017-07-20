@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="scripts.js"></script>
+        <title> Lab 19 - JS Shopping list</title>
+    
+    </head>
+    <body onload="setDisplayNone()">
+        <div id="header">
+                Grand Circus Cafe
+                
+        </div>
+        <div id="content">
+         <div id="left">
+            <button type="button" class="button" onclick="showall()">All Items</button><br>
+            <button type="button" class="button" onclick="displayButtons('drinks')">Drinks</button><br>
+            <button type="button" class="button" onclick="displayButtons('snacks')">Snacks</button><br>
+            <button type="button" class="button" onclick="displayButtons('meals')">Meals</button><br>
+            <br>
+            <button type="button" class="button" onclick="displayButtons('cart')">View Cart</button><br>
+        </div>
+        
+        <div id="right">
+           
+            <div id="drinks">
+                <p> Drinks</p>
+                <button id="blackCoffee" class="menubutton" onclick="addToCart('Black Coffee', .99)">Black Coffee <br> $0.99 </button> 
+                <button id="mocha"  class="menubutton" onclick="addToCart('Mocha', 4.99)">Mocha<br> $4.99</button>
+                <button id="espresso"  class="menubutton" onclick="addToCart('Espresso', 4.99)">Espresso<br> $4.99</button> 
+                <button id="cappuccino"  class="menubutton" onclick="addToCart('Cappuccino', 5.99)">Cappuccino<br> $5.99</button>
+            </div>
+            
+            <div id="snacks">
+                <p> Snacks</p>
+                <button id="donut"  class="menubutton" onclick="addToCart('Donut', .50)">Donut<br> $0.50 </button> 
+                <button id="bagel"  class="menubutton" onclick="addToCart('Bagel', 4.99)">Bagel<br> $0.99</button>
+                <button id="muffin" class="menubutton"  onclick="addToCart('Muffin', 4.99)">Muffin<br> $1.25</button> 
+                <button id="fruit"  class="menubutton" onclick="addToCart('Fruit', 4.99)">Fruit<br> $0.99</button>
+            </div>
+            
+            <div id="meals">
+                <p> Meals</p>
+                <button id="eggcheese"  class="menubutton" onclick="addToCart('Egg & Cheese ', 8.99)">Egg and Cheese Sandwich<br> $8.99</button> 
+                <button id="hamcheese"  class="menubutton" onclick="addToCart('Ham & Cheese', 9.99)">Ham and Cheese Sandwich<br> $9.99</button>
+                <button id="baconegg"  class="menubutton" onclick="addToCart('Bacon & Egg', 4.99)">Bacon and Egg Sandwich<br> $8.99</button> 
+                <button id="works"  class="menubutton" onclick="addToCart('The Works', 11.99)"><br>The Works Sandwich<br> $11.99</button>
+            </div>
+            <div id="cart">
+               <h3>Cart</h3>
+                
+            </div>
+        </div>
+        </div>
+       
+        <div id="footer">
+            <div id="footerRight">
+               $<span id="total">0.00</span>  
+            </div>
+            <div id="footerLeft">
+            Total: 
+            </div>
+        </div>
+        <!-- ------------- Shopping Cart --------------- -->
+         
+
+    </body>
+</html>
