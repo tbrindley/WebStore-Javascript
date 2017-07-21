@@ -23,11 +23,16 @@ function displayButtons(x){
 function addToCart(item,cost){
     var id = document.getElementById("cart");
     var textnode = document.createTextNode(item + ", $" + cost);
+    var linebreak = document.createElement("br");
     id.appendChild(textnode);
+    id.appendChild(linebreak);
     
     var oldtotal = Number(document.getElementById('total').textContent);
     var newtotal = cost + oldtotal;
     var printTotal = newtotal.toFixed(2);
     
     document.getElementById("total").innerHTML = printTotal;
+}
+function showCart(){
+    
 }
